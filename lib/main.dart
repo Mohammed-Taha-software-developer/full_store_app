@@ -11,7 +11,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  await EnvVariables.instance.init(envType: EnvTypeEnum.dev);
+  await EnvVariables.instance.init(envType: EnvTypeEnum.prod);
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitDown,
     DeviceOrientation.portraitUp,
