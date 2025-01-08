@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:full_store_app/core/app/connentivity.dart';
 import 'package:full_store_app/core/common/views/no_network_view.dart';
 import 'package:full_store_app/core/env/env_variables.dart';
+import 'package:full_store_app/core/route/abb_route.dart';
+import 'package:full_store_app/test1.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -19,14 +21,8 @@ class MyApp extends StatelessWidget {
             splitScreenMode: true,
             child: MaterialApp(
               debugShowCheckedModeBanner: EnvVariables.instance.debugMode,
-              home: Scaffold(
-                appBar: AppBar(
-                  title: const Text("Home Page"),
-                ),
-                body: Center(
-                  child: const Text("You are connected to the internet",),
-                ),
-              ),
+              onGenerateRoute: AppRoutes.onGenerateRoute,
+              initialRoute: AppRoutes.test1,
             ),
           );
         } else {

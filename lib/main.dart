@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:full_store_app/core/app/connentivity.dart';
-import 'package:full_store_app/run_app/run_app.dart';
+import 'package:full_store_app/run_app.dart';
 
 import 'core/env/env_variables.dart';
 import 'firebase_options.dart';
