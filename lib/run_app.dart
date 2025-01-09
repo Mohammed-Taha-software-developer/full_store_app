@@ -4,6 +4,7 @@ import 'package:full_store_app/core/app/connentivity.dart';
 import 'package:full_store_app/core/common/views/no_network_view.dart';
 import 'package:full_store_app/core/env/env_variables.dart';
 import 'package:full_store_app/core/route/abb_route.dart';
+import 'package:full_store_app/core/styles/theme/app_theme.dart';
 import 'package:full_store_app/test1.dart';
 
 class MyApp extends StatelessWidget {
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
             minTextAdapt: true,
             splitScreenMode: true,
             child: MaterialApp(
+              theme: lightTheme(),
               debugShowCheckedModeBanner: EnvVariables.instance.debugMode,
               onGenerateRoute: AppRoutes.onGenerateRoute,
               initialRoute: AppRoutes.test1,
