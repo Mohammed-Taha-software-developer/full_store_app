@@ -9,11 +9,12 @@ class Test1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: context.color.mainColor,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Image.asset(context.image.mainImage ?? ''),
           TextButton(
             onPressed: () {
               context.pushNamed(AppRoutes.test2);
