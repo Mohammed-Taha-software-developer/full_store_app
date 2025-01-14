@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:full_store_app/core/language/app_localizations.dart';
-import 'package:full_store_app/core/styles/theme/theme_color_extension.dart';
-import 'package:full_store_app/core/styles/theme/theme_image.dart';
+import 'package:full_store_app/core/styles/theme/assets_extension.dart';
+import 'package:full_store_app/core/styles/theme/color_extension.dart';
 
 extension ContextExtension on BuildContext {
   ///theme
-  ThemeColor get color => Theme.of(this).extension<ThemeColor>()!;
+  MyColors get color => Theme.of(this).extension<MyColors>()!;
 
-  ThemeImage get image => Theme.of(this).extension<ThemeImage>()!;
+  MyAssets get image => Theme.of(this).extension<MyAssets>()!;
 
   ///Localizations
   String translate(String translate) {

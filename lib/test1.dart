@@ -14,7 +14,6 @@ class Test1 extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(context.image.mainImage ?? ''),
           TextButton(
             onPressed: () {
               context.pushNamed(AppRoutes.test2);

@@ -13,7 +13,6 @@ void main() async {
   await ScreenUtil.ensureScreenSize();
   await EnvVariables.instance.init(envType: EnvTypeEnum.prod);
   await ConnectivityController.instance.init();
-
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -28,3 +27,4 @@ void main() async {
   });
 }
 //  await ScreenUtil.ensureScreenSize();
+//name: full_store_app
