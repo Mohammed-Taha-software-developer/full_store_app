@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
             designSize: const Size(390, 845),
             minTextAdapt: true,
             splitScreenMode: true,
-            child: MaterialApp(
-              locale: Locale("en"),
-              supportedLocales:AppLocalizationsSetup.supportedLocales ,
+            builder: (_, child) => MaterialApp(
+              locale: const Locale("en"),
+              supportedLocales: AppLocalizationsSetup.supportedLocales,
               localizationsDelegates: AppLocalizationsSetup.localizationsDelegates,
               localeResolutionCallback: AppLocalizationsSetup.localeResolutionCallback,
               theme: lightTheme(),
