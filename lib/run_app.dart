@@ -25,10 +25,10 @@ class MyApp extends StatelessWidget {
               supportedLocales: AppLocalizationsSetup.supportedLocales,
               localizationsDelegates: AppLocalizationsSetup.localizationsDelegates,
               localeResolutionCallback: AppLocalizationsSetup.localeResolutionCallback,
-              theme: lightTheme(),
+              theme: darkTheme(),
               debugShowCheckedModeBanner: EnvVariables.instance.debugMode,
               onGenerateRoute: AppRoutes.onGenerateRoute,
-              initialRoute: AppRoutes.test1,
+              initialRoute: AppRoutes.signIn,
             ),
           );
         } else {
