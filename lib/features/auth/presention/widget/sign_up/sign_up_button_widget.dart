@@ -6,15 +6,15 @@ import 'package:full_store_app/core/common/widget/text_app.dart';
 import 'package:full_store_app/core/extension/extension.dart';
 import 'package:full_store_app/core/language/lang_keys.dart';
 
-class LoginButtonWidget extends StatelessWidget {
-  const LoginButtonWidget({super.key});
+class SignUpButtonWidget extends StatelessWidget {
+  const SignUpButtonWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return CustomFadeInRight(
       duration: 600,
       child: CustomLinearButton(
-        height: 50.h,
+          height: 50.h,
           width: MediaQuery.sizeOf(context).width,
           onPressed: () {},
           child: TextApp(
