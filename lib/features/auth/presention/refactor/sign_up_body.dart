@@ -46,7 +46,7 @@ class SignUpBody extends StatelessWidget {
               duration: 650,
               child: TextButton(
                 onPressed: () {
-                  context.pushNamed(AppRoutes.signIn);
+                  context.pushReplacementNamed(AppRoutes.signIn);
                 },
                 child: TextApp(
                   text: context.translate(LangKeys.youHaveAccount),

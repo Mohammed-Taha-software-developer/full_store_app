@@ -20,20 +20,30 @@ dependencies:
   flutter_screenutil: ^5.9.0
   flutter_native_splash: ^2.3.10
 
-
+#dart run build_runner build --delete-conflicting-outputs
   #Firebase
   firebase_core: ^2.24.2
+  #animation package
   animate_do: ^3.3.4
+  #change app name package
   rename_app: ^1.6.2
+  #shared preferences
+  shared_preferences: ^2.3.5
+  #Flutter Bloc
+  flutter_bloc: ^9.0.0
+  #freezed annotation
+  freezed_annotation: ^2.4.4
+  get_it: ^8.0.3
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   very_good_analysis: ^5.1.0
-  flutter_launcher_icons: ^0.13.1
   flutter_lints: ^2.0.0
-
+  build_runner: ^2.4.13
+  freezed: ^2.5.7
+  flutter_launcher_icons: ^0.13.1
 flutter_icons:
   android: true
   ios: true

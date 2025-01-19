@@ -9,7 +9,6 @@ import 'package:full_store_app/features/auth/presention/widget/auth_title_widget
 import 'package:full_store_app/features/auth/presention/widget/login/login_button_widget.dart';
 import 'package:full_store_app/features/auth/presention/widget/login/login_text_field.dart';
 import 'package:full_store_app/features/auth/presention/widget/mode_and_lang_widget.dart';
-import 'package:full_store_app/features/auth/presention/widget/sign_up/sign_up_button_widget.dart';
 
 class SignInBody extends StatelessWidget {
   const SignInBody({super.key});
@@ -43,7 +42,7 @@ class SignInBody extends StatelessWidget {
               duration: 650,
               child: TextButton(
                 onPressed: () {
-                  context.pushNamed(AppRoutes.signUp);
+                  context.pushReplacementNamed(AppRoutes.signUp);
                 },
                 child: TextApp(
                   text: context.translate(LangKeys.createAccount),
