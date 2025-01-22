@@ -8,5 +8,5 @@ Future<void> setupInjector() async {
 }
 
 Future<void> _initCore() async {
-  sl.registerFactory(() => AppCubit()); // تسجيل AppCubit بشكل صحيح
+  sl.registerFactory(() => AppCubit());
 }
