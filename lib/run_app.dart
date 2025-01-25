@@ -43,6 +43,18 @@ class MyApp extends StatelessWidget {
                     localeResolutionCallback:
                         AppLocalizationsSetup.localeResolutionCallback,
                     theme: cubit.isDark ? lightTheme() : darkTheme(),
+                    builder: (context, widget) {
+                      return GestureDetector(
+                        onTap: (){
+                          FocusManager.instance.primaryFocus?.unfocus();
+                        },
+                        child: Scaffold(
+                          body: Builder(builder: (context) {
+                            return widget!;
+                          }),
+                        ),
+                      );
+                    },
                     debugShowCheckedModeBanner: EnvVariables.instance.debugMode,
                     onGenerateRoute: AppRoutes.onGenerateRoute,
                     initialRoute: AppRoutes.signIn,

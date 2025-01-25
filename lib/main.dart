@@ -13,26 +13,22 @@ import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  /// Initialize Shared Preferences
+  await SharedPref.instance.init();
   ///Injection
   await setupInjector();
-
   ///ScreenUtil
   await ScreenUtil.ensureScreenSize();
   await SharedPref.instance.init();
-
   ///EnvVariables
   await EnvVariables.instance.init(envType: EnvTypeEnum.prod);
   await ConnectivityController.instance.init();
-
   ///Firebase
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
   ///Bloc observer
   Bloc.observer = AppBlocObserver();
-
   ///Cancel screen rotation
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitDown,

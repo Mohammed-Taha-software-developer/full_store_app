@@ -9,7 +9,7 @@ extension ContextExtension on BuildContext {
 
   MyAssets get image => Theme.of(this).extension<MyAssets>()!;
 
-  ///
+  ///text style
 
   TextStyle get textStyle => Theme.of(this).textTheme.displaySmall!;
 
@@ -18,7 +18,7 @@ extension ContextExtension on BuildContext {
     return AppLocalizations.of(this)!.translate(translate).toString();
   }
 
-  ///route
+  ///Navigation
   Future<dynamic> pushNamed(String pushNamed, {Object? arg}) {
     return Navigator.of(this).pushNamed(pushNamed, arguments: arg);
   }

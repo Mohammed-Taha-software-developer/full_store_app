@@ -1,5 +1,3 @@
-// ignore_for_file: lines_longer_than_80_chars
-
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:full_store_app/core/service/shared_perf/shared_keys.dart';
@@ -13,24 +11,21 @@ class DioFactory {
 
   static Dio getDio() {
     const timeOut = Duration(seconds: 30);
+
     if (dio == null) {
       dio = Dio();
       dio!
         ..options.connectTimeout = timeOut
         ..options.receiveTimeout = timeOut
         ..options.headers['Authorization'] =
-            'Bearer ${SharedPref.instance.getString(PrefKeys.accessToken)}';
+            'Bearer ${SharedPref.instance.getString(PrefKeys.accessToken) ?? ''}';
       debugPrint(
         "[USER Token] ====> ${SharedPref.instance.getString(PrefKeys.accessToken) ?? 'NULL TOKEN'}",
       );
-
       addDioInterceptor();
-      return dio!;
-    } else {
-      return dio!;
     }
+    return dio!;
   }
-
   static void addDioInterceptor() {
     dio?.interceptors.add(
       PrettyDioLogger(
